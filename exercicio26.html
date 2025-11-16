@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exercicio26.css">
+    <title>comparador</title>
+</head>
+<body>
+
+  <section class="container">
+    <fieldset>
+        <legend>Compare dois números</legend>
+        <p>Clique em começar</p>
+
+        <input type="button" value="começar" onclick="compararValores()">
+
+        <div id="comparacao"></div>
+    </fieldset>
+
+  </section>
+  <script>
+     function compararValores(){
+
+        const val1 = parseInt(prompt("Digite um número:"))
+        const val2 = parseInt(prompt("Digite outro número:"))
+        const comparacao = document.getElementById("comparacao")
+     
+     if(val1==null || val2==null ){
+        comparacao.textContent="Tente novamente. Infome um número"
+        return
+     }
+
+     //comparacao
+     if(val1>val2){
+        comparacao.textContent="- O primeiro valor é o maior."
+     }else if(val1<val2){
+        comparacao.textContent="- O segundo valor é o maior."
+     }else{
+        comparacao.textContent="-Não existe valor maior, os dois são iguais."
+     }
+     }
+  </script>
+  <footer>
+    copyright dualstack devs.maieze
+</footer>
+</body>
+</html>
